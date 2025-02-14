@@ -1,0 +1,9 @@
+flask
+psycopg2-binary
+Flask-SQLAlchemy
+flask_login
+flask-wtf
+email-validator
+flask_bcrypt
+pandas
+matplotlib

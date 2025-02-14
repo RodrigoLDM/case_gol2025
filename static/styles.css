@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    position: relative;
+}
+
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message-container {
+    background: rgb(255, 254, 192);
+    border: 2px solid yellow;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    width: 300px;
+    text-align: center;
+    position: fixed;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logoutBtn{
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.filterRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filterRow form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.filterRow label {
+    font-weight: bold;
+    display: block;
+    font-size: 14px;
+}
+
+.select2-container {
+    width: auto !important;
+    min-width: 160px !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #ccc !important;
+    border-radius: 5px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 16px !important;
+    color: #333 !important;
+    padding-left: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    right: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    position: absolute !important;
+}
+
+.select2-dropdown {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+header {
+    background: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header a {
+    margin-left: 20px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffa600;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #cf8700;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

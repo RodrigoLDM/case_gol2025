@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <div style="display: flex; flex-direction: column; align-items: center; position: relative;">
+
+        {% set message = get_flashed_messages() %}
+        {% if message %}
+        <div class="message-container">
+            {% for msg in message %}
+            {{ msg }}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+
+        <div class="login-container">
+            <h1>Entrar na sua conta</h1>
+
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                {{ form.email }}
+                {{ form.password }}
+                <button type="submit">Login</button>
+            </form>
+
+            <a href="{{url_for('register')}}">Não possui uma conta? Crie uma agora</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
