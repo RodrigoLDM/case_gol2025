@@ -1,4 +1,4 @@
-from flask import render_template, url_for, redirect, flash, jsonify, request
+from flask import render_template, url_for, redirect, flash
 from flask_login import (
     login_user,
     LoginManager,
@@ -9,9 +9,7 @@ from flask_wtf import FlaskForm
 from wtforms import EmailField, PasswordField, SubmitField, SelectField, DateField
 from wtforms.validators import InputRequired, Length, ValidationError, Email
 from database import app, db, User, Flights, bcrypt, init_db
-import matplotlib.pyplot as plt
-from io import BytesIO
-import base64
+import os
 
 init_db()
 
@@ -138,3 +136,8 @@ def register():
 def logout():
     logout_user()
     return redirect(url_for("login"))
+
+
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)

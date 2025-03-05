@@ -7,8 +7,11 @@ from os import environ
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = environ.get("POSTGRES_DB_URL")
+
+DATABASE_URL = environ.get("DATABASE_URL", "").replace("postgres://", "postgresql://")
+app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
 app.config["SECRET_KEY"] = "ultramegasecretkey"
+
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
@@ -37,7 +40,8 @@ def init_db():
 
 
 def populate_db():
-    df = pd.read_csv("Dados_Estatisticos.csv", sep=";", header=1)
+    csv_url = "https://sistemas.anac.gov.br/dadosabertos/Voos%20e%20opera%C3%A7%C3%B5es%20a%C3%A9reas/Dados%20Estat%C3%ADsticos%20do%20Transporte%20A%C3%A9reo/Dados_Estatisticos.csv"
+    df = pd.read_csv(csv_url, sep=";", header=1)
 
     filtered_df = df[
         (df["EMPRESA_SIGLA"] == "GLO")
