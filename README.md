@@ -2,4 +2,6 @@ Essa aplicação foi feita para um processo seletivo, onde a aplicação deve te
 
 As informações utilizadas pra popular o gráfico e relacionados foram dadas em um arquivo .csv que foi entregue.
 
-O projeto inicialmente apenas funcionava localmente, porém foram feitas alterações para funcionar na web através do serviõ de hosting Railway, que é responsável por permitir que o aplicativo permaneça rodando online e também pelo banco de dados Postgres.
+O projeto inicialmente apenas funcionava localmente, porém foram feitas alterações para funcionar na web através do serviço de hosting Railway, que é responsável por permitir que o aplicativo permaneça rodando online e também pelo banco de dados Postgres.
+
+A aplicação web pode ser acessada [aqui](https://casegol2025-production.up.railway.app/).
